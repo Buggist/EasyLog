@@ -42,7 +42,7 @@ log_YYYY-MM-DD_id.txt
 e.g: log_2024-09-16_1.txt
 ```
 
-### Log file content format
+### Log file content example
 ```
 2024-09-16 10:49:00,012 - DEBUG
 Log a debug information.
