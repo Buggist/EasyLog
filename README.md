@@ -8,7 +8,7 @@ pip install littlelog
 
 ## Usage
 
-### Use it in single .py file
+### Use it in single *.py* file
 ```python
 from littlelog import logger, debugger
 
