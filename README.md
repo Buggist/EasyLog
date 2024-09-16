@@ -58,9 +58,8 @@ All changes of configuration will be saved.
 ### Log file name format
 ```
 log_YYYY-MM-DD_id.txt
-
-e.g: log_2024-09-16_1.txt
 ```
+e.g: log_2024-09-16_1.txt
 
 ### Log file content example
 ```
