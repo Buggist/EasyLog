@@ -46,7 +46,7 @@ Shoulda create a independent logger module from littlelog for your project.
 import littlelog
 
 # Log files will be output to "where/your/logs/output".
-# Config of your project logger module saves at "where/ProjectConfig/file/stay"
+# Logger config of your project saves at "where/ProjectConfig/file/stay"
 logger = littlelog.new("where/your/logs/output", "where/ProjectConfig/file/stay")
 
 debugger = logger.log_decorator
