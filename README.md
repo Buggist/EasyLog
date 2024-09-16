@@ -8,9 +8,12 @@ pip install littlelog
 
 ## Usage
 
-### use it in single .py file
+### Use it in single .py file
 ```python
 from littlelog import logger, debugger
+
+# Config log output path
+logger.outputs.append("logs/")
 
 # manually log - five levels in total
 logger.debug("Log a debug information.")
@@ -34,6 +37,23 @@ def div_func(a, b):
 your_function()
 div_func(3, 0)
 ```
+
+### Use it in a project
+Create a independent logger module for your project.
+*project_logger.py*
+```python
+import littlelog
+
+# Log files will be output to "where/your/logs/output".
+# Config of your project logger module saves at "where/ProjectConfig/file/stay"
+logger = littlelog.new("where/your/logs/output", "where/ProjectConfig/file/stay")
+
+debugger = logger.log_decorator
+```
+And import *project_logger.py* instead of littlelog to fetch logger in any file of current project,
+they will share exactly 1 logger and same configurations.
+
+All changes of configuration will be saved.
 
 ### Log file name format
 ```
@@ -83,11 +103,20 @@ ZeroDivisionError: division by zero
 
 ### Configurations
 ```python
-logger.outputs.append("new/logs/path")   # add log output path
-logger.level = "debug"                   # "debug", "info", "warning", "error", "critical"
-logger.max_file_size = 5                 # MB
-logger.max_files = 20       # Oldest file will be delete when reaching this limitation.
-logger.terminal = False                  # Disable logging to terminal.
+# add log output path
+logger.outputs.append("new/logs/path")   # (default is [])
+
+# "debug", "info", "warning", "error", "critical"
+logger.level = "debug"                   # (default is "debug")
+
+# MB           
+logger.max_file_size = 5                 # (default is 2)
+
+# Oldest file will be delete when reaching this limitation.
+logger.max_files = 20                    # (default is 10)
+
+# Disable logging to terminal.
+logger.terminal = False                  # (default is True)
 ```
 
 
