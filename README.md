@@ -49,7 +49,7 @@ import littlelog
 # Logger config of your project saves at "where/ProjectConfig/file/stay"
 logger = littlelog.new("where/your/logs/output", "where/ProjectConfig/file/stay")
 
-debugger = logger.log_decorator
+debugger = logger.log_decorator    # optional
 ```
 And import ***project_logger.py*** instead of ***littlelog*** to fetch logger in any file of current project,
 they will share exactly 1 logger and same configurations.
