@@ -119,5 +119,7 @@ logger.max_files = 20                    # (default is 10)
 logger.terminal = False                  # (default is True)
 ```
 
+All changes of Configuration will be aplly to logger imediatly.
+
 
 
