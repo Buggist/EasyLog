@@ -38,7 +38,7 @@ your_function()
 div_func(3, 0)
 ```
 
-### Use it in a project
+### Use it as logger of whole project
 Create a independent logger module for your project.
 *project_logger.py*
 ```python
